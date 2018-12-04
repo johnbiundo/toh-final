@@ -16,4 +16,6 @@ jobs:
             - "node_modules"
       # note: had to change to --single-run to --watch=false and --browser to --browsers=ChromeHeadless
       - run: npm run test -- --watch=false --no-progress --browsers=ChromeHeadless
-      #- run: npm run e2e -- --no-progress --config=protractor-ci.conf.js
+      # note: had to remove obsolete --no-progress, and change config ref to protractorConfig
+      - run: npm run e2e -- --protractorConfig=e2e/protractor-ci.conf.js
+
