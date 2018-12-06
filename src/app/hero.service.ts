@@ -11,6 +11,14 @@ const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
 };
 
+// @Injectable is the decorator for annotating a service provider class (HeroService)
+// ProvidedIn is a medadata ption where we can configure the provider of the service class.
+// We are specifying the "root injector" as the provider. Alternatively, we could specify an injector for
+// a specific NgModule.
+//
+// So the root injector is the dependency provider.
+// Doing this (configuring the root injector as the provider) makes this a tree-shakable provider
+// alternatively, specifying it in an NgModule, is NOT tree shakeable.
 @Injectable({ providedIn: 'root' })
 export class HeroService {
 

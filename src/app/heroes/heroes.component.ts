@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
-
+import { environment } from '../../environments/environment';
 @Component({
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
@@ -15,6 +15,7 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
     this.getHeroes();
+    console.log('Environment: ', environment);
   }
 
   getHeroes(): void {

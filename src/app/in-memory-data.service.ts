@@ -7,10 +7,15 @@ import { Injectable } from '@angular/core';
 })
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
+    // 'heroes' (the hash key below) is the collection name
+    // for the heroes collection.  So this will map all
+    // URI's of the form /api/heroes/
+    //
+    // each collection has a primary key of id
     const heroes = [
-      { id: 11, name: 'Mr. Nice' },
-      { id: 12, name: 'Narco' },
-      { id: 13, name: 'Bombasto' },
+      { id: 11, name: 'Mr. Bad' },
+      { id: 12, name: 'Whodunnit' },
+      { id: 13, name: 'Dudley' },
       { id: 14, name: 'Celeritas' },
       { id: 15, name: 'Magneta' },
       { id: 16, name: 'RubberMan' },
